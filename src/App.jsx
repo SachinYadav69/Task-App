@@ -8,7 +8,7 @@ const App = () => {
      
      <Background/>
 
-    <Foreground/>
+     <Foreground/>
     </div>
   )
 }
