@@ -72,17 +72,44 @@ const Foreground = () => {
     <div ref={ref} className='fixed z-[3] w-full left-0 h-full flex flex-col gap-5 p-10'>
 
       <form onSubmit={handleSubmit} className="flex gap-2 flex-wrap bg-white p-4 rounded shadow">
-        <input type="text" value={tagTitle} onChange={(e) => setTagTitle(e.target.value)} placeholder="Title/Activity" />
-        <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Routine description" />
-        <input type="text" value={filesize} onChange={(e) => setFilesize(e.target.value)} placeholder="Timings" />
-        
+           <input
+               type="text"
+               value={tagTitle}
+               onChange={(e) => setTagTitle(e.target.value)}
+               placeholder="Title/Activity"
+               required 
+           />
 
-        <select value={tagColor} onChange={(e) => setTagColor(e.target.value)}>
-          <option value="green">Done</option>
-          <option value="blue">On Progress</option>
-        </select>
-        <button type="submit">Add Todo</button>
-      </form>
+                   <input
+                     type="text"
+                      value={desc}
+                      onChange={(e) => setDesc(e.target.value)}
+                      placeholder="Routine description"
+                      required
+                    />
+
+            <input
+               type="text"
+                value={filesize}
+                onChange={(e) => setFilesize(e.target.value)}
+                placeholder="Timings"
+                required 
+             />
+
+            <select
+                value={tagColor}
+                onChange={(e) => setTagColor(e.target.value)}
+                 required 
+             >
+               <option value="green">Done</option>
+              <option value="blue">On Progress</option>
+           </select>
+
+           <button type="submit">Add Todo</button>
+       </form>
+
+
+
 
       <div className='flex gap-5 flex-wrap'>
         {cards.map((item, index) => (

@@ -10,8 +10,8 @@ import { motion } from "motion/react"
 const Card = ({data, reference}) => {
   return (
     <motion.div drag dragConstraints={reference} 
-    whileDrag={{scale : 1}} 
-    dragElastic ={0.2} 
+    whileDrag={{scale : 1.2}} 
+    dragElastic ={0.5} 
     dragTransition={{bounceStiffness:100, bounceDamping: 30}}
     className='relative flex-shrink-0 w-60 h-72 bg-zinc-900/90 rounded-[45px] text-white px-8 py-10 overflow-hidden '>
 
